@@ -9,6 +9,7 @@ prometheus:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
       - '--web.enable-lifecycle'
+    user: "1000:1000"
     expose:
       - 9090
     ports:
